@@ -9,9 +9,9 @@ public interface ContactService {
 
     List<Contact> search(String term);
 
-    Contact findOne(Integer id);
+    Contact findOne(Long id);
 
     void save(Contact id);
 
-    void delete(Integer id);
+    void delete(Long id);
 }

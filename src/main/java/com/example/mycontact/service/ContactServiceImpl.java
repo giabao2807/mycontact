@@ -25,7 +25,7 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public Contact findOne(Integer id) {
+    public Contact findOne(Long id) {
         Optional<Contact> isExist =contactRepository.findById(id);
         return isExist.isPresent()? isExist.get() :null ;
     }
@@ -36,7 +36,7 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
         contactRepository.deleteById(id);
     }
 }
