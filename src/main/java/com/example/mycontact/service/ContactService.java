@@ -5,7 +5,7 @@ import com.example.mycontact.entity.Contact;
 import java.util.List;
 
 public interface ContactService {
-    Iterable<Contact> findAll();
+    List<Contact> findAll();
 
     List<Contact> search(String term);
 

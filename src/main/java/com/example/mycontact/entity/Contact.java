@@ -1,18 +1,23 @@
 package com.example.mycontact.entity;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 
 @Entity
-@Table(name="contact")
+
+@Table (name="contact")
 public class Contact {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id",nullable = false)
     private Integer id;
 
+    @NotEmpty
     @Column(name="name",nullable = false)
     private String name;
 
+    @Email
     @Column(name="email")
     private String email;
 
